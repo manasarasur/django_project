@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'coffeeshop.wsgi.application'
+
 
 
 # Database
