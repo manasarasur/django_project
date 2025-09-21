@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ge6q8=!$1))zkr2envt0aa*05!^x9b@g=e42791%2=cm9nsl$4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://django-project-6z50.onrender.com", "localhost"]
 
 
 # Application definition
@@ -48,7 +48,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 ROOT_URLCONF = 'coffeeshop.urls'
 
